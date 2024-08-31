@@ -1,0 +1,12 @@
+<div class="search-container">
+    <input #sourceInput type="text" placeholder="Enter source" 
+           (keyup.enter)="search(sourceInput.value, destinationInput.value)" 
+           [value]="sourceTerm" />
+  
+    <input #destinationInput type="text" placeholder="Enter destination" 
+           (keyup.enter)="search(sourceInput.value, destinationInput.value)" 
+           [value]="destinationTerm" />
+  
+    <button (click)="search(sourceInput.value, destinationInput.value)">Search</button>
+  </div>
+  
